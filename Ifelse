@@ -1,0 +1,12 @@
+
+#Clase de if else elif
+value=int(input('Ingresa un numero entero: '))
+
+if value < 8:
+    print(f'El numero es menor a 8')
+if value < 3:
+    print(f'El numero es menor a 3')
+elif value == 8:
+    print(f'El numero es igual a 8')
+else:
+    print(f'El numero {value} es mayor a 5')
