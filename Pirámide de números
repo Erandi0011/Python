@@ -1,0 +1,24 @@
+def pyramid(number):
+    """
+    Function that make a coefficient's list.
+    number: integer
+    return: list.
+    """
+    lista = []
+    pyramids_number = number + 1
+
+    for times in range(pyramids_number):
+        string = str(times)
+        value_list = string * times
+        lista.append(value_list)
+    inverse =lista[::-1]
+    lista.extend(inverse)
+    lista.pop(pyramids_number)
+    lista.pop(0)
+    lista.pop(-1)
+    return lista
+
+pyramids_number = int(input('Enter a number to create a pyramid: '))
+pyramids_list = pyramid(pyramids_number)
+for number in range(len(pyramids_list)):
+    print(pyramids_list[number])
