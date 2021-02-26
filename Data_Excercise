@@ -1,0 +1,32 @@
+datos=[4,  8,  4,  6,  8,  6,  7,  7,  7,  8,  10,  9,  7, 6, 10, 8, 5, 9, 6, 3, 7, 6, 4, 7, 6, 9, 7, 4, 7, 6, 8, 8, 9, 11, 8, 7, 10, 8, 5, 7, 7, 6, 5, 10, 8, 9, 7, 5, 6, 5]
+f=list(range(9))
+x = range(3,12)
+Lista=list(x)
+print(Lista)
+
+for i in range(0,9):
+    s=0
+    for j in range (0,len(datos)):
+        if Lista[i]==datos[j]:
+            s=s+1;
+    f[i]=s
+print(f)
+import statistics
+Desviacion=statistics.stdev(datos)
+print("Desviacion Estandar =",Desviacion)
+print("Varianza =", Desviacion*Desviacion)
+
+def prom(datos):
+    suma=0
+    for v in datos:
+        suma+=v
+    return suma/50
+print("Media = " ,prom(datos))
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+plt.plot(Lista,f)
+plt.show()
+
+plt.bar(Lista,[1, 4, 5, 9, 12, 9, 5, 4, 1])
